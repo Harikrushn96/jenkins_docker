@@ -3,10 +3,8 @@ pipeline {
 
     stages {
         stage ('docker build') {
-            agent {
-                docker {
-                    sh 'docker build -t first:latest .'
-                }
+            steps {
+                sh 'docker build -t first:latest .'
             }
         }
    }
